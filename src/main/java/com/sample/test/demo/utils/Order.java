@@ -1,8 +1,10 @@
 package com.sample.test.demo.utils;
 
 import java.util.List;
-import org.apache.maven.surefire.shade.booter.org.apache.commons.lang3.StringUtils;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+@JsonInclude(Include.NON_EMPTY)
 public class Order {
 
     private String id = "";
@@ -24,32 +26,6 @@ public class Order {
 
     public List<Pizza> getItems() {
         return items;
-    }
-
-    public String toJsonString() {
-        // Hacked for now
-        String json = "{";
-        if (StringUtils.isNotBlank(getId())) {
-            json += "\n\"id\":\"" + getId() + "\"";
-        }
-        if (getItems() != null) {
-            if (StringUtils.isNotBlank(getId())) {
-                json += ",";
-            }
-            json += "\n\"items\":[";
-            for (int i = 0; i < getItems().size(); i++) {
-                if (i > 0) {
-                    json += ",";
-                }
-
-                json += "\n" + getItems().get(i).toJsonString();
-            }
-
-            json += "\n]";
-        }
-        json += "\n}";
-        return json;
-
     }
 
 }
