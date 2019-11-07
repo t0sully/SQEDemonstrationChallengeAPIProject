@@ -28,4 +28,17 @@ public class Order {
         return items;
     }
 
+    @Override
+    public String toString() {
+        String result = "";
+        if (StringUtils.isNotBlank(getId())) {
+            result += " id: " + getId();
+        }
+        if(getItems()!= null && getItems().size()>0) {
+            result += " items: " + getItems().toString();
+        }
+        return result;
+
+    }
+
 }
