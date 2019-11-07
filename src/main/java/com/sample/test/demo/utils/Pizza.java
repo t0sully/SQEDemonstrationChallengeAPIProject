@@ -38,4 +38,19 @@ public class Pizza {
         return toppings;
     }
 
+    @Override
+    public String toString() {
+        String result = "";
+        if (StringUtils.isNotBlank(getItem())) {
+            result += " item: " + getItem();
+        }
+        if (StringUtils.isNotBlank(getPizza())) {
+            result += " pizza: " + getPizza();
+        }
+        if (getToppings() != null && getToppings().size() > 0) {
+            result += " toppings: " + getToppings();
+        }
+        return result;
+    }
+
 }
