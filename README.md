@@ -6,6 +6,16 @@
 3. From command line run mvn clean install -U -DskipTests
 5. Make sure you can run the DemoTest
 
+#### Expectations
+We will be evaluating
+1. Quality of test cases
+2. Variety  of testing types (examples: boundary, happy path, negative, etc)
+3. Code structure and organization
+4. Naming conventions
+5. Code readability
+6. Code modularity
+
+
 #### Excercise
 1. Review the spec in the root directory, PizzaAPIReferenceDoc.  API endpoints for this excercise can be found here
    https://my-json-server.typicode.com/sa2225/demo/
