@@ -26,6 +26,6 @@ We will be evaluating
 4. When complete please check your code into a public git repo
 
 #### Test Cases
-
- 1.  
+![image info](Test_Case.png)
+  
 
